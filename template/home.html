@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Prediction </title>
+</head>
+
+
+<body style="background: url(../static/bf98d81968e881618a3965cb748e7b7e.jpg);
+ background-repeat: no-repeat; 
+background-color: yellow;
+background-size: cover;
+max-width: 500px;
+  margin: auto;">
+
+    <h1 style="color: rgb(240, 18, 18);" >Heart disease prediction </h1>
+    <form method="get" action="/heart_diagnose">     
+        <!-- Headings for the form -->
+        <div class="headingsContainer">
+            <h3 style="color:rgb(21, 7, 71);">Heart Disease Prediction in single click</h3>
+        </div>
+
+        <!-- Main container for all inputs -->
+        <div class="mainContainer">
+            <label for="Age" style="color: black;">Enter Your Age</label><br>
+            <input type="text" placeholder="Enter Your Age" name="Age" required>
+            <br><br>
+
+            <label for="Sex" style="color: black;">Your Gender</label><br>
+            <select placeholder="Enter Gender" name="Sex" style="width: 180px;" required>
+                <option></option>
+                <option value = "male">male</option>
+                <option value = "female">female</option>
+              </select>
+              <br></br>           
+            <label for="Chest_pain_type" style="color: black;">Enter you chest pain</label><br>
+
+            <select placeholder="Enter you chest pain" name="Chest_pain_type" style="width: 180px;" required>
+                <option></option>
+                <option value = "typical angina">typical angina</option>
+                <option value = "atypical angina">atypical angina</option>
+                <option value = "non-anginal pain">non-anginal pain</option>
+              </select>
+              <br></br>
+            <label for="BP" style="color: black;">Enter Your BP</label><br>
+            <input type="text" placeholder="Enter Your BP" name="BP" required>
+            <br><br>
+            <label for="Cholesterol" style="color: black;">Enter Your Cholesterol</label><br>
+            <input type="text" placeholder="Enter Your Cholesterol" name="Cholesterol" required>
+            
+            <p>(enter the value between 50 to 600)</p>
+            <br><br>
+            <label for="FBS_over_120" style="color: black;">Enter you FBS</label><br>
+            <select placeholder="Enter you FBS" name="FBS_over_120" style="width: 180px;" required>
+                <option></option>
+                <option value = "1">greater than 120</option>
+                <option value = "0">less than 120</option>
+              </select>
+              <br></br>
+            <label for="EKG_results" style="color: black;">Enter you EKG result</label><br>
+            <select placeholder="Enter you EKG result" name="EKG_results" style="width: 180px;" required>
+                <option></option>
+                <option value = "0">normal</option>
+                <option value = "1">medium</option>
+                <option value = "2">high</option>
+              </select>
+              <br></br>
+            <label for="Max_HR" style="color: black;">Enter Your maximum heart rate</label><br>
+            <input type="text" placeholder="Enter Your maximum heart rate" name="Max_HR" style ="width :350px;" required>
+            <p> (Enter the value between 50 to 250) </p>
+            <br><br>
+            <label for="Exercise_angina" style="color: black;">Enter your exercise engina</label><br>
+            <select placeholder="Enter ypur exercise engina" name="Exercise_angina" style="width: 180px;" required>
+                <option></option>
+                <option value = "yes">yes</option>
+                <option value = "no">no</option>
+              </select>
+              <br></br>              
+            <label for="ST_depression" style="color: black;">Enter Your ST depression</label><br>
+            <input type="text" placeholder="Enter Your ST depression" name="ST_depression" style ="width :350px;" required>
+            <p>(Enter the value between 0 to 7)</p>
+            <br><br>
+            <label for="Slope_of_ST" style="color: black;">Enter the slope of ST</label><br>
+
+            <select placeholder="Enter the slope of ST" name="Slope_of_ST" style="width: 180px;" required>
+                <option></option>
+                <option value = "upsloping">upsloping</option>
+                <option value = "flat">flat</option>
+                <option value = "downsloping">downsloping</option>
+              </select>
+              <br></br>
+            <label for="Number_of_vessels_fluro" style="color: black;">Enter no of vessel fluro</label><br>
+            <input type="text" placeholder="Enter no of vessel fluro" name="Number_of_vessels_fluro" style ="width :350px;" required>
+            <p> (enter the no of vessel from 0,1,2,3)</p>
+            <br><br>
+            <label for="Thallium" style="color: black;">Enter the thallium</label><br>
+            <select placeholder="Enter the thallium" name="Thallium" style="width: 180px;" required>
+                <option></option>
+                <option value = "normal">normal</option>
+                <option value = "fixed defect">fixed defect</option>
+                <option value = "reversable defect">reversable defect</option>
+              </select>
+              <br></br>           
+              
+            <!-- Submit button -->
+            <input type="submit" value="Submit">
+            <br><br>
+            <h2 style="color:red;">The heart disease  will be :<b> {{ prediction}}  </b>  </h2>
+        </div>
+    </form>
+
+
+</body>
+</html>
